@@ -6,6 +6,4 @@ const prisma = new PrismaClient();
 export async function GET(request) {
   const users = await prisma.user.findMany();
   return NextResponse.json({ users });
-
-  // res.status(405).json({ message: "Method not allowed" });
 }
