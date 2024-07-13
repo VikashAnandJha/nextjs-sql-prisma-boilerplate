@@ -1,6 +1,6 @@
 const sql = require("msnodesqlv8");
 const connectionString =
-  "server=localhost;Database=testdb;Trusted_Connection=Yes;Driver={ODBC Driver 17 for SQL Server};";
+  "sqlserver://localhost:1433;database=testdb;integratedSecurity=true;trustServerCertificate=true;";
 const query = "SELECT * FROM users";
 sql.query(connectionString, query, (err, rows) => {
   console.log({ err });
